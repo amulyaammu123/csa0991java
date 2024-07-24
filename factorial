@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class FactorialCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt user for the value of n
+        System.out.print("Enter a number (n): ");
+        int n = scanner.nextInt();
+
+        // Calculate factorial using iterative method
+        long factorial = calculateFactorialIterative(n);
+
+        // Print the result
+        System.out.println(n + " Factorial = " + factorial);
+
+        scanner.close();
+    }
+
+    // Method to calculate factorial using an iterative approach
+    private static long calculateFactorialIterative(int n) {
+        long result = 1;
+        for (int i = 1; i <= n; i++) {
+            result *= i;
+        }
+        return result;
+    }
+}
