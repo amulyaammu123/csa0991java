@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class VotingEligibility {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Define the voting age
+        final int VOTING_AGE = 18;
+
+        // Prompt user for their age
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt();
+
+        // Check voting eligibility
+        if (age >= VOTING_AGE) {
+            System.out.println("You are eligible to vote.");
+        } else {
+            int yearsLeft = VOTING_AGE - age;
+            System.out.println("You are not eligible to vote.");
+            System.out.println("You will be eligible to vote in " + yearsLeft + " years.");
+        }
+
+        scanner.close();
+    }
+}
