@@ -1,43 +1,30 @@
 import java.util.Scanner;
-
-public class MatrixMultiplication {
+ public class MatrixMultiplication {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        // Prompt user for dimensions of the first matrix
+        Scanner scanner = new Scanner(System.in); 
         System.out.print("Enter the number of rows for Matrix 1: ");
         int rows1 = scanner.nextInt();
         System.out.print("Enter the number of columns for Matrix 1 (and rows for Matrix 2): ");
-        int cols1 = scanner.nextInt();
-
-        // Prompt user for dimensions of the second matrix
+        int cols1 = scanner.nextInt(); 
         System.out.print("Enter the number of columns for Matrix 2: ");
-        int cols2 = scanner.nextInt();
-
-        // Initialize matrices
+        int cols2 = scanner.nextInt(); 
         int[][] matrix1 = new int[rows1][cols1];
-        int[][] matrix2 = new int[cols1][cols2];  // Columns of Matrix 1 = Rows of Matrix 2
-        int[][] result = new int[rows1][cols2];
-
-        // Input elements for the first matrix
+        int[][] matrix2 = new int[cols1][cols2];   
+        int[][] result = new int[rows1][cols2]; 
         System.out.println("Enter elements for Matrix 1:");
         for (int i = 0; i < rows1; i++) {
             for (int j = 0; j < cols1; j++) {
                 System.out.print("Element [" + i + "][" + j + "]: ");
                 matrix1[i][j] = scanner.nextInt();
             }
-        }
-
-        // Input elements for the second matrix
+        } 
         System.out.println("Enter elements for Matrix 2:");
         for (int i = 0; i < cols1; i++) {
             for (int j = 0; j < cols2; j++) {
                 System.out.print("Element [" + i + "][" + j + "]: ");
                 matrix2[i][j] = scanner.nextInt();
             }
-        }
-
-        // Perform matrix multiplication
+        } 
         for (int i = 0; i < rows1; i++) {
             for (int j = 0; j < cols2; j++) {
                 result[i][j] = 0;
@@ -46,8 +33,6 @@ public class MatrixMultiplication {
                 }
             }
         }
-
-        // Print the resulting matrix
         System.out.println("Resulting matrix after multiplication:");
         for (int i = 0; i < rows1; i++) {
             for (int j = 0; j < cols2; j++) {
@@ -55,7 +40,6 @@ public class MatrixMultiplication {
             }
             System.out.println();
         }
-
-        scanner.close();
+         scanner.close();
     }
 }
