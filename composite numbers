@@ -1,33 +1,24 @@
 import java.util.Scanner;
-
-public class CompositeNumbers {
+ public class CompositeNumbers {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-        // Prompt user for the values of A and B
         System.out.print("Enter the value of A: ");
         int A = scanner.nextInt();
         System.out.print("Enter the value of B: ");
         int B = scanner.nextInt();
-
-        // Print all composite numbers between A and B
         System.out.println("Composite numbers between " + A + " and " + B + ":");
         for (int num = A; num <= B; num++) {
             if (isComposite(num)) {
                 System.out.print(num + " ");
             }
         }
-
-        scanner.close();
+         scanner.close();
     }
-
-    // Method to check if a number is composite
-    private static boolean isComposite(int number) {
+     private static boolean isComposite(int number) {
         if (number <= 1) {
             return false; // Numbers less than or equal to 1 are not composite
         }
-
-        int count = 0;
+         int count = 0;
         for (int i = 1; i <= number; i++) {
             if (number % i == 0) {
                 count++;
